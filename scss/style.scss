@@ -1,0 +1,676 @@
+
+
+/* -------------
+MAIN INFO
+---------------*/
+
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	background: #ecf0f1;
+	color: #34495e;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: Poppins, sans-serif;
+	overflow-x: hidden;
+	background: #ecf0f1;
+	color: #34495e;
+}
+
+.bg-primary,
+.btn-primary {
+	background-color:rgb(60, 99, 255)
+}
+
+.btn-white-border {
+	border: 2px #fff solid;
+}
+
+h1, h2 {
+	font-weight: 800;
+}
+
+
+
+/* -------------
+BUTTONS
+---------------*/
+
+// .carousel-caption.btn {
+// 	position: relative;
+// 	//display:block;
+// 	width: 200px;
+// 	font-weight: 800;
+// 	font-size: 15px;
+// 	letter-spacing: 2px;
+// 	color: #fff;
+// 	border: 2px #fff solid;
+// 	border-radius: 4px;
+// 	text-transform: uppercase;
+// 	outline: 0;
+// 	cursor: pointer;
+// 	transition:         0.08s ease-in;
+// 	-o-transition:      0.08s ease-in;
+// 	-ms-transition:     0.08s ease-in;
+// 	-moz-transition:    0.08s ease-in;
+// 	-webkit-transition: 0.08s ease-in;
+//   }
+  
+//   .carousel-caption.btn:hover {
+// 	color: whitesmoke;
+//   }
+  
+//   .carousel-caption.btn:before {
+// 	content: "";
+// 	position: absolute;
+// 	background: #B53471;
+// 	bottom: 0;
+// 	left: 0;
+// 	right: 0;
+// 	top: 100%;
+// 	z-index: -1;
+// 	-webkit-transition: top 0.09s ease-in;
+//   }
+  
+//   .carousel-caption.btn:hover:before {
+// 	top: 0;
+//   }
+
+/* -------------
+PRELOADER
+---------------*/
+
+.loader-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	z-index:999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loader-wrapper img {
+	width: 100px;
+	height: auto;
+}
+
+.preloader-bounce{
+	animation: key1 .4s ease infinite alternate;
+  }
+  
+  @keyframes key1{
+	0% {transform: translateY(0px);}
+	100% {transform: translateY(-10px);}
+  }  
+
+
+/* -------------
+NAVIGATION BAR
+---------------*/
+
+.navbar {
+	z-index:999;
+	background: #ecf0f1;
+	opacity: 0.95;
+}
+
+.navbar a {
+    font-weight: 800;
+	line-height: 30px;
+    letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #000;
+	padding-left: 1rem !important;
+	padding-right: 1rem !important;
+	transition-duration: 0.2s;
+}
+
+.navbar a:hover,
+.navbar .nav-item .active {
+	color: #B53471;
+	transition-duration: 0.2s;
+}
+
+
+.nav-item > li .active > a, .nav-item>li.active>a:focus, .nav-item>li.active>a:hover {
+    color: #fff;
+    background-color: #337ab7;
+}
+
+.logo {
+	height: 30px;
+}
+
+.navbar-toggler {
+	color: #000;
+}
+
+
+/* -------------
+HEADER
+---------------*/
+
+#home-heading {
+	position: relative;
+	min-height: 200px;
+	background: url('../img/lights.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: white;
+}
+
+.dark-overlay {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+
+/* -------------
+MAP
+---------------*/
+
+#map {
+	background: #eee;
+}
+
+
+
+/* -------------
+CONTACT
+---------------*/
+
+#contact a {
+	text-decoration: none;
+}
+
+.fa-facebook:hover {
+	color: #4367b0;
+	-webkit-transition-duration: 0.2s;
+	        transition-duration: 0.2s;
+}
+
+/* -------------
+FOOTER
+---------------*/
+
+#main-footer {
+	background: #000;
+}
+
+
+
+/* -------------
+CAROUSEL
+---------------*/
+
+.carousel-item {
+	height: 400px;
+}
+
+.carousel-caption {
+	top: 0%;
+}
+
+@media (min-width: 576px) {
+	.carousel-caption {
+		top: 10%;
+	}
+}
+
+.carousel-caption .lead {
+	width: 40%;
+}
+
+.carousel-image-1 {
+	background: url(../img/controllerleft.jpg);
+	background-size: cover;
+}
+
+.carousel-image-2 {
+	background: url(../img/12.jpg);
+	background-size: cover;
+}
+
+.carousel-image-3 {
+	background: url(../img/image3.jpg);
+	background-size: cover;
+}
+
+.carousel-inner h1 {
+	font-weight: 800;
+}
+
+
+/* -------------
+CITIES SECTION
+---------------*/
+
+
+.shape-1 {
+	clip-path: polygon(0 0, 75% 0%, 100% 100%, 0% 100%);
+	transform: translateX(30px);
+	width: 300px;
+	border: 0px solid rgb(60, 99, 255);
+	border-radius: 10px 0 0 10px;
+}
+
+.shape-2 {
+	clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
+	transform: translateX(-30px);
+	width: 300px;
+	border: 0px solid #B53471;
+	border-radius:  0 10px 10px 0;
+}
+
+.shape {
+	cursor: pointer;
+	position: relative;
+  }
+
+  #cities a {
+	  text-decoration: none;
+	  font-weight: 800;
+	  text-transform: uppercase;
+	  letter-spacing: 2px;
+	  color: #fff;
+  }
+
+  #cities h4 {
+	  font-weight: 800;
+  }
+  
+  .shape:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+  }
+
+  .shape-1:after {
+	background: linear-gradient(45deg, transparent 50%, rgb(60, 99, 255) 50%);
+	border-radius: 10px 0 0 10px;
+}
+
+  .shape-2:after {
+	background: linear-gradient(45deg, transparent 50%, #B53471 50%);
+	border-radius:  0 10px 10px 0;
+}
+  
+  .shape,
+  .shape:after {
+	background-size: 300%;
+	background-position: 100%;
+	transition: 1s;
+  }
+  
+  .shape:hover,
+  .shape:hover:after {
+	background-position: 0;
+  }
+
+  .shape-1:hover,
+  .shape-1:hover:after {
+	color: rgb(60, 99, 255);
+  }
+
+  .shape-2:hover,
+  .shape-2:hover:after {
+	color: #B53471;
+  }
+
+  #cities .pulse {
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out
+
+  }
+
+
+/* -------------
+PINK LINE
+---------------*/
+
+.pink-line {
+	position: absolute;
+	clip-path: polygon(100% 0, 100% 50%, 0 100%, 0 50%);
+width: 100%;
+height: 600px;
+background-color: #B53471;
+}
+
+
+
+/* -------------
+XBOX SECTION
+---------------*/
+
+#xbox {
+	background-color: #fff;
+}
+
+.xbox-title {
+	position: absolute;
+	bottom: 70px;
+	right: -50px;
+	color: #B53471;
+	font-weight: 800;
+}
+
+
+
+/* -------------
+RANGE SECTION
+---------------*/
+
+.kaunas-rent .range {
+	transform: scale(0.7);
+	display: flex;
+	flex-direction: column;
+	width: auto;
+}
+
+.value {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  width: 80%; 
+  margin: 0 auto;
+  padding: 20px;
+  height: 135px;
+  letter-spacing: -.07em;
+  text-shadow: white 2px 2px 2px;
+}
+
+.price {
+	font-size: 2em;
+}
+
+input[type="range"] {
+  display: block;
+  -webkit-appearance: none;
+  background-color: #bdc3c7;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #B53471;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}​
+  input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: white;
+    border: 2px solid #e74c3c;
+  }
+  input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.6);
+  }
+
+
+
+/* -------------
+PRODUCTS & KAUNAS-RENT
+---------------*/
+
+#products {
+	background: #eee;
+}
+
+#products a {
+	text-decoration: none;
+	color: #34495e;
+}
+
+#products .col-md-4 {
+	transition-duration: .4s;
+}
+
+  #products .col-md-4:hover {
+	padding: 0 13px;
+	transform: scale(1.05);
+	transition-duration: .4s;
+  }
+
+#products .card-header,
+.kaunas-rent .card-header {
+	position: absolute;
+	background-color: #fff;
+	width: 70px;
+	height: 70px;
+	top: -35px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+	text-shadow: white 2px 2px 2px;
+	line-height: 50px;
+}
+
+
+/* -------------
+ANIMATIONS
+---------------*/
+
+.js--wp-2 {
+	opacity: 0;
+}
+
+.js--wp-2 .animated {
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#video-play {
+	position: relative;
+	min-height: 200px;
+	background: url('../img/media.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 0 -300px;
+	text-align: center;
+	color: white;
+}
+
+#video-play a {
+	color: white;
+}
+
+#page-header {
+	background: url(../img/image1.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 0 -300px;
+}
+
+#about img {
+	margin-top: -50px;
+}
+
+#faq {
+	background: url("../img/oculus_quest_action.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+#faq .container {
+	opacity: .9;
+}
+
+#faq .card {
+	border: #444;
+}
+
+#faq .card-header,
+#faq .card-body {
+	border-bottom: 1px rgba(255, 255, 255, 0.137) solid;
+}
+
+#faq a {
+	text-decoration: none;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+.mouse-container {
+	position: relative;
+}
+
+
+  .mouse-scroll {
+	position: absolute;
+	left: 50%;
+	top:30px;
+	transform: translateX(-50%);
+  }
+
+  .mouse-scroll span{
+	display: block;
+	width: 5px; 
+	height: 5px;
+	-ms-transform: rotate(45deg);
+	  -webkit-transform: rotate(45deg);
+		 transform: rotate(45deg);
+		 transform: rotate(45deg);
+	border-right: 2px solid #B53471; 
+	border-bottom: 2px solid #B53471;
+	margin: 0 0 3px 5px;
+  }
+  .mouse-scroll .mouse {
+	height: 21px;
+	width: 14px;
+	border-radius: 10px;
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+	border: 2px solid #B53471;
+	top: 170px;
+  }
+  .mouse-scroll .down-arrow-1 {
+	margin-top: 6px;
+  }
+  .mouse-scroll .down-arrow-1, #mouse-scroll .down-arrow-2, #mouse-scroll .down-arrow-3 {
+	-webkit-animation: mouse-scroll 1s infinite; 
+	  -moz-animation: mouse-scroll 1s infinite:
+  }
+  .mouse-croll .down-arrow-1 {
+	 -webkit-animation-delay: .1s; 
+	 -moz-animation-delay: .1s;
+	 -webkit-animation-direction: alternate;
+  }
+  .mouse-scroll .down-arrow-2 {
+	-webkit-animation-delay: .2s; 
+	-moz-animation-delay: .2s;
+	-webkit-animation-direction: alternate;
+  }
+  .mouse-scroll .down-arrow-3 {
+	 -webkit-animation-delay: .3s;
+	 -moz-animation-dekay: .3s;
+	 -webkit-animation-direction: alternate;
+  }
+  .mouse-scroll .mouse-in {
+	height: 5px;
+	width: 2px;
+	display: block; 
+	margin: 5px auto;
+	background: #B53471;
+	position: relative;
+  }
+  .mouse-scroll .mouse-in {
+   -webkit-animation: animated-mouse 1.2s ease infinite;
+	moz-animation: mouse-animated 1.2s ease infinite;
+  }
+  
+  @-webkit-keyframes animated-mouse {
+	0% {
+	  opacity: 1;
+	  -webkit-transform: translateY(0);
+	  -ms-transform: translateY(0);
+	  transform: translateY(0);
+	}
+	100% {
+	   opacity: 0;
+	  -webkit-transform: translateY(6px);
+	  -ms-transform: translateY(6px);
+	  transform: translateY(6px);
+	}
+  }
+  @-webkit-keyframes mouse-scroll {
+	0% {
+	  opacity: 1;
+	}
+	50% {
+	  opacity: .5;
+	}
+	100% {
+	  opacity: 1;
+	} 
+  }
+  @keyframes mouse-scroll {
+	0% {
+	  opacity: 0;
+	}
+	50% {
+	  opacity: 0.5;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+   */
