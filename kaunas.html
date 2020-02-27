@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-    <link rel="manifest" href="../favicon/site.webmanifest">
-    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
@@ -27,7 +27,7 @@
 
     <nav class="navbar navbar-expand-md sticky-top shadow" id="main-nav">
         <div class="container">
-            <a href="index.html" class="navbar-brand"><span><img class="logo" src="../img/logo-controller.png" alt=""></span> Party Play</a>
+            <a href="index.html" class="navbar-brand"><span><img class="logo" src="img/logo-controller.png" alt=""></span> Party Play</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="fas fa-bars"></span>
             </button>
@@ -134,7 +134,7 @@
                     <a href="#kaunas-vr">
                     <div class="card">
                         <div class="card-header header-rounded rounded-circle"><i class="fas fa-vr-cardboard"></i></div>
-                        <img src="../img/18.png" alt="" class="card-img-top img-fluid">
+                        <img src="img/18.png" alt="" class="card-img-top img-fluid">
                         <div class="card-body text-center p-3">
                             <div class="card-title">
                                 <h3 class="text-info">Virtuali realybė</h3>
@@ -151,7 +151,7 @@
                     <a href="#kaunas-console">
                     <div class="card">
                         <div class="card-header header-rounded rounded-circle"><i class="fas fa-gamepad"></i></div>
-                        <img src="../img/5.jpg" alt="" class="card-img-top img-fluid">
+                        <img src="img/5.jpg" alt="" class="card-img-top img-fluid">
                         <div class="card-body text-center p-3">
                             <div class="card-title">
                                 <h3 class="text-info">Žaidimų konsolės</h3>
@@ -201,7 +201,7 @@
             <div class="col-md-6">
                 <div class="card text-center">
                     <div class="card-header header-rounded rounded-circle">1</div>
-                    <img src="../img/oculus_quest.jpg" alt="" class="img-fluid card-img-top">
+                    <img src="img/oculus_quest.jpg" alt="" class="img-fluid card-img-top">
                     <div class="card-body p-3">
                         <h3 class="text-info">Oculus Quest</h3>
                         <p class="mb-0">
@@ -238,7 +238,7 @@
             <div class="col-md-6">
                 <div class="card text-center">
                     <div class="card-header header-rounded rounded-circle">2</div>
-                    <img src="../img/psvr.jpg" alt="" class="img-fluid card-img-top">
+                    <img src="img/psvr.jpg" alt="" class="img-fluid card-img-top">
                     <div class="card-body p-3">
                         <h3 class="text-info">PlayStation VR</h3>
                         <p class="mb-0">
@@ -294,7 +294,7 @@
                 <div class="col-md-6">
                     <div class="card text-center">
                         <div class="card- header-rounded rounded-circle">1</div>
-                        <img src="../img/xbox_one.jpg" alt="" class="img-fluid card-img-top">
+                        <img src="img/xbox_one.jpg" alt="" class="img-fluid card-img-top">
                         <div class="card-body p-3">
                             <h3 class="text-info">XBOX ONE Slim</h3>
                             <p class="mb-0">
@@ -328,15 +328,20 @@
                 <div class="col-md-6">
                     <div class="card text-center">
                         <div class="card-header header-rounded rounded-circle">2</div>
-                        <img src="../img/xbox360.jpg" alt="" class="img-fluid card-img-top">
+                        <img src="img/xbox360.jpg" alt="" class="img-fluid card-img-top">
                         <div class="card-body p-3">
                             <h3 class="text-info">XBOX 360</h3>
                             <p class="mb-0">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus totam aliquid, minima recusandae porro tempora corporis temporibus voluptatem fugiat doloribus placeat eaque optio non aspernatur sequi eos aliquam quidem repudiandae.
                             </p>                        
                             <div class="range">
-                                <div class="value">1 para<div class="price">7€</div></div>
-                                <input type="range" min="0" max="30" step="1" value="0">
+                                <div class="value">
+                                    <span id="daysXbox360">1 para</span>
+                                    <div class="price">
+                                        <span id="priceXbox360">10</span>€
+                                    </div>
+                                </div>
+                                <input id="rangeXbox360" type="range" min="1" max="14" step="1" value="1">
                             </div>
                             <ul class="list-group text-left">
                                 <li class="list-group-item list-group-item-info">
@@ -382,7 +387,7 @@
                 <div class="col-md-4">
                     <div class="card text-center">
                         <div class="card-header header-rounded rounded-circle">1</div>
-                        <img src="../img/viewsonic_fullhd.jpg" alt="" class="img-fluid card-img-top">
+                        <img src="img/viewsonic_fullhd.jpg" alt="" class="img-fluid card-img-top">
                         <div class="card-body p-3">
                             <h3 class="text-info">View Sonic Full HD</h3>
                             <p class="mb-0">
@@ -419,7 +424,7 @@
                 <div class="col-md-4">
                     <div class="card text-center">
                         <div class="card-header header-rounded rounded-circle">2</div>
-                        <img src="../img/viewsonicc.jpg" alt="" class="img-fluid card-img-top">
+                        <img src="img/viewsonicc.jpg" alt="" class="img-fluid card-img-top">
                         <div class="card-body p-3">
                             <h3 class="text-info">View Sonic</h3>
                             <p class="mb-0">
@@ -456,7 +461,7 @@
                 <div class="col-md-4">
                     <div class="card text-center">
                         <div class="card-header header-rounded rounded-circle">3</div>
-                        <img src="../img/acer.jpg" alt="" class="img-fluid card-img-top">
+                        <img src="img/acer.jpg" alt="" class="img-fluid card-img-top">
                         <div class="card-body p-3">
                             <h3 class="text-info">Acer</h3>
                             <p class="mb-0">
@@ -507,39 +512,52 @@
                     <div class="card bg-dark">
                         <div class="card-header">
                             <h5 class="mb-0"><a href="#collapseOne" data-toggle="collapse" data-parent="#accordion1">
-                                Ką daryti norint išsinuomoti įrangą?
+                                Ar išrašote sąskaitos faktūrą?
                             </a>
                             </h5>
                         </div>
                         <div id="collapseOne" class="collapse">
                             <div class="card-body">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error harum atque odio consequuntur dolor adipisci minus distinctio suscipit libero exercitationem.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-dark">
-                        <div class="card-header">
-                            <h5 class="mb-0"><a href="#collapseTwo" data-toggle="collapse" data-parent="#accordion1">
-                                Ar prieš atvažiuojant išsinuomoti būtina suderinti detales iš anksto?
-                            </a>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse">
-                            <div class="card-body">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error harum atque odio consequuntur dolor adipisci minus distinctio suscipit libero exercitationem.
+                                Taip. Sąskaitos faktūrą atsiunčiame elektroniniu paštu. Nuomos kaina išlieka ta pati.
                             </div>
                         </div>
                     </div>
                     <div class="card bg-dark">
                         <div class="card-header">
                             <h5 class="mb-0"><a href="#collapseThree" data-toggle="collapse" data-parent="#accordion1">
-                                Kokiu adresu važiuoti?
+                                Ar būtina išankstinė rezervacija?
                             </a>
                             </h5>
                         </div>
                         <div id="collapseThree" class="collapse">
                             <div class="card-body">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error harum atque odio consequuntur dolor adipisci minus distinctio suscipit libero exercitationem.
+                                Taip. Prieš atvykstant būtina susisiekti, kad patikrintumėme, ar Jūsų norimu laikotarpiu įranga nėra užimta. Paskambinkite numeriu +37062114494 arba parašykite žinutę "Facebook" platformoje.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-dark">
+                        <div class="card-header">
+                            <h5 class="mb-0"><a href="#collapseFive" data-toggle="collapse" data-parent="#accordion1">
+                                Kur atvykti pasiimti įrangą?
+                            </a>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse">
+                            <div class="card-body">
+                                Esame įsikūrę Nemuno g. 26, Kaune. Atvykę paskambinkite - ateisime ir įrangą perduosime.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-dark">
+                        <div class="card-header">
+                            <h5 class="mb-0"><a href="#collapseSeven" data-toggle="collapse" data-parent="#accordion1">
+                                Ar galima išsinuomoti įrangą po darbo valandų ar savaitgaliais?
+                            </a>
+                            </h5>
+                        </div>
+                        <div id="collapseSeven" class="collapse">
+                            <div class="card-body">
+                                Taip. Įrangą galime perduoti bet kuriuo metu.
                             </div>
                         </div>
                     </div>
@@ -549,40 +567,53 @@
                 <div id="accordion2">
                     <div class="card bg-dark">
                         <div class="card-header">
-                            <h5 class="mb-0"><a href="#collapseFour" data-toggle="collapse" data-parent="#accordion2">
+                            <h5 class="mb-0"><a href="#collapseTwo" data-toggle="collapse" data-parent="#accordion2">
                                 Ar galimas pristatymas į namus?
                             </a>
                             </h5>
                         </div>
-                        <div id="collapseFour" class="collapse">
+                        <div id="collapseTwo" class="collapse">
                             <div class="card-body">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error harum atque odio consequuntur dolor adipisci minus distinctio suscipit libero exercitationem.
+                                Šiuo metu įrangos pristatyti negalime.
                             </div>
                         </div>
                     </div>
                     <div class="card bg-dark">
                         <div class="card-header">
-                            <h5 class="mb-0"><a href="#collapseFive" data-toggle="collapse" data-parent="#accordion2">
+                            <h5 class="mb-0"><a href="#collapseFour" data-toggle="collapse" data-parent="#accordion2">
                                 Ką daryti, jei sugadinau įrangą?
                             </a>
                             </h5>
                         </div>
-                        <div id="collapseFive" class="collapse">
+                        <div id="collapseFour" class="collapse">
                             <div class="card-body">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error harum atque odio consequuntur dolor adipisci minus distinctio suscipit libero exercitationem.
+                                Pirmiausia - praneškite mums. Natūralu, kad įranga laikui bėgant dėvisi, todėl smulkios žalos atylginti neprašome.
+                                Tačiau esant tyčiniam arba rimtam mechaniniam pažeidimui reikės padengti remonto išlaidas.
                             </div>
                         </div>
                     </div>
                     <div class="card bg-dark">
                         <div class="card-header">
                             <h5 class="mb-0"><a href="#collapseSix" data-toggle="collapse" data-parent="#accordion2">
-                                Ar galima prasitęsti nuomą?
+                                Ar galima pratęsti nuomą?
                             </a>
                             </h5>
                         </div>
                         <div id="collapseSix" class="collapse">
                             <div class="card-body">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error harum atque odio consequuntur dolor adipisci minus distinctio suscipit libero exercitationem.
+                               Taip. Tačiau būtina susisiekti su mumis ir pasitikslinti, ar įranga nėra rezervuota kitiems klientams.
+                            </div>
+                        </div>
+                    </div><div class="card bg-dark">
+                        <div class="card-header">
+                            <h5 class="mb-0"><a href="#collapseEight" data-toggle="collapse" data-parent="#accordion2">
+                                Ar įrangą siunčiate į kitus miestus?
+                            </a>
+                            </h5>
+                        </div>
+                        <div id="collapseEight" class="collapse">
+                            <div class="card-body">
+                                Taip. Už papildomą mokėstį įrangą siunčiame autobusų siuntomis.
                             </div>
                         </div>
                     </div>
@@ -668,7 +699,7 @@
     <!-- PRELOADER -->
 
     <div class="loader-wrapper">
-        <div class="preloader-bounce"><img src="../img/logo-controller.png" alt="" class="img-fluid"></div>
+        <div class="preloader-bounce"><img src="img/logo-controller.png" alt="" class="img-fluid"></div>
     </div>
     
     

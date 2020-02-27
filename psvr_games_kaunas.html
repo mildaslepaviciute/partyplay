@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Party Play</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
+    <title>Party Play</title>
 </head>
-<body>
+<body data-spy="scroll" data-target="#main-nav" id="home">
 
     <!-- NAVBAR -->
 
-    <nav class="navbar navbar-expand-md sticky-top">
+    <nav class="navbar navbar-expand-md sticky-top shadow" id="main-nav">
         <div class="container">
-            <a href="index.html" class="navbar-brand"><span><img class="logo" src="../img/logo-controller.png" alt=""></span> Party Play</a>
+            <a href="index.html" class="navbar-brand"><span><img class="logo" src="img/logo-controller.png" alt=""></span> Party Play</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="fas fa-bars"></span>
             </button>
@@ -30,16 +37,16 @@
                         <a href="index.html" class="nav-link">pradžia</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link">virtuali realybė</a>
+                        <a href="#klaipeda-vr" class="nav-link">virtuali realybė</a>
                     </li>
                     <li class="nav-item">
-                        <a href="services.html" class="nav-link">žaidimų konsolės</a>
+                        <a href="#klaipeda-projector" class="nav-link">projektoriai</a>
                     </li>
                     <li class="nav-item">
-                        <a href="blog.html" class="nav-link">projektoriai</a>
+                        <a href="#faq" class="nav-link">D.U.K.</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="nav-link">kontaktai</a>
+                        <a href="#contact" class="nav-link">kontaktai</a>
                     </li>
                 </ul>
             </div>
@@ -59,9 +66,22 @@
                 <div class="carousel-item carousel-image-1 active">
                     <div class="container">
                         <div class="carousel-caption d-none d-sm-block text-right mb-5">
-                            <h1 class="display-3">PARTY<br>PLAY</h1>
-                            <p class="lead ml-auto">Nerealiausia įranga jūsų šventei</p>
-                            <a href="kaunas.html#kaunas-vr" class="btn btn-lg btn-pink">Grįžti atgal</a>
+                            <div class="rainbow-text js--wp-1">
+                                <div class="rainbow-text"></div>
+                                    <span class="letter">P</span>
+                                    <span class="letter">A</span>
+                                    <span class="letter">R</span>
+                                    <span class="letter">T</span>
+                                    <span class="letter">Y</span>
+                            </div>
+                            <div class="rainbow-text js--wp-1">
+                                    <span class="letter">P</span>
+                                    <span class="letter">L</span>
+                                    <span class="letter">A</span>
+                                    <span class="letter">Y</span>
+                            </div>
+                            <p class="lead ml-auto js--wp-2">Nerealiausia įranga jūsų šventei</p>
+                            <a href="kaunas.html" class="btn btn-lg btn-info js--wp-3">Grįžti</a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +99,7 @@
                         <div class="carousel-caption d-none d-sm-block text-right mb-5">
                             <h1 class="display-3">Heading Three</h1>
                             <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias a, odit iure iste suscipit sapiente!</p>
-                            <a href="" class="btn btn-warning btn-lg">Learn More</a>
+                            <a href="" class="btn btn-info btn-lg">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -106,52 +126,101 @@
                     <img src="img/beatsaber.png" alt="" class="img-fluid"></a>
                 </div>
                 <div class="col-md-4">
-                    <a href="../img/fruitninja.png" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
-                        <img src="../img/fruitninja.png" alt="" class="img-fluid"></a>
+                    <a href="img/fruitninja.png" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
+                        <img src="img/fruitninja.png" alt="" class="img-fluid"></a>
                 </div>
                 <div class="col-md-4">
-                    <a href="../img/residentevil.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
-                        <img src="../img/residentevil.jpg" alt="" class="img-fluid"></a>
+                    <a href="img/residentevil.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
+                        <img src="img/residentevil.jpg" alt="" class="img-fluid"></a>
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col-md-4">
-                    <a href="../img/granturismo.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
-                    <img src="../img/granturismo.jpg" alt="" class="img-fluid"></a>
+                    <a href="img/granturismo.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
+                    <img src="img/granturismo.jpg" alt="" class="img-fluid"></a>
                 </div>
                 <div class="col-md-4">
-                    <a href="../img/hustlekings.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
-                        <img src="../img/hustlekings.jpg" alt="" class="img-fluid"></a>
+                    <a href="img/hustlekings.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
+                        <img src="img/hustlekings.jpg" alt="" class="img-fluid"></a>
                 </div>
                 <div class="col-md-4">
-                    <a href="../img/rigs.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
-                        <img src="../img/rigs.jpg" alt="" class="img-fluid"></a>
+                    <a href="img/rigs.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
+                        <img src="img/rigs.jpg" alt="" class="img-fluid"></a>
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col-md-4">
-                    <a href="../img/recroom.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
-                    <img src="../img/recroom.jpg" alt="" class="img-fluid"></a>
+                    <a href="img/recroom.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
+                    <img src="img/recroom.jpg" alt="" class="img-fluid"></a>
                 </div>
                 <div class="col-md-4">
-                    <a href="../img/vrworlds.png" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
-                        <img src="../img/vrworlds.png" alt="" class="img-fluid"></a>
+                    <a href="img/vrworlds.png" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
+                        <img src="img/vrworlds.png" alt="" class="img-fluid"></a>
                 </div>
                 <div class="col-md-4">
-                    <a href="../img/crow.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
-                    <img src="../img/crow.jpg" alt="" class="img-fluid"></a>
+                    <a href="img/crow.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
+                    <img src="img/crow.jpg" alt="" class="img-fluid"></a>
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col-md-4">
-                    <a href="../img/justdance.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
-                        <img src="../img/justdance.jpg" alt="" class="img-fluid"></a>
+                    <a href="img/justdance.jpg" data-toggle="lightbox" data-gallery="img-gallery" data-height="560" data-width="560">
+                        <img src="img/justdance.jpg" alt="" class="img-fluid"></a>
                 </div>
             </div>
-            <a href="" class="btn btn-lg btn-pink">Grįžti atgal</a>
+            <a href="kaunas.html" class="btn btn-lg btn-outline-info">Grįžti atgal</a>
         </div>
     </section>
 
+
+    <!-- MAP -->
+
+    <section id="map" class="py-5">
+        <h1 class="text-center mb-4">Mus rasite:</h1>
+        <div class="container d-flex justify-content-center">
+            <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJH41FgvDb5EYRR92sNOnhT1U&zoom=15&key=AIzaSyCCVpR1f7ulWwPSik8amfwE9WF4AqUhbAY" allowfullscreen></iframe>        </div>
+    </section>
+
+    <!-- CONTACT -->
+
+        <section id="contact" class="p-5 bg-dark text-white">
+            <div class="container">
+                <h1 class="text-center mb-4">Susisiekime</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="text-info">Apie mus</h3>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quasi ego
+                        id curem, quid ille aiat aut neget. Quam illa ardentis amores
+                        excitaret sui! Cur tandem?
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-info">Kontaktai</h3>
+                        <p>
+                        Tel.nr.:<br/>
+                        +370 621 14494 - Tadas Andriuška<br/><br/>
+
+                        Elektroninis paštas:<br/>
+                        info@partyplay.lt
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-info">Adresas</h3>
+                        <p>
+                        Kaune: Vilniaus g. 26<br><br>
+                        Klaipėdoje: Jono g. 3<br>
+                        <br>
+                        Prieš atvykstant būtina susiderinti iš anksto
+                        </p>
+                        <h3 class="text-info">Sekite mus</h3>
+                        <a href="https://www.facebook.com/PartyPlayNuoma/"><i class="fab fa-facebook fa-2x mr-2"></i></a>
+                        <a href="https://www.instagram.com/PartyPlayNuoma/"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- FOOTER -->
 
@@ -159,29 +228,38 @@
             <div class="row">
                 <div class="col">
                     <div class="container text-white">
-                        <p>Copyright &copy; <span id="year"></span> Glozzom</p>
+                        <p class="mb-0 text-gradient">Copyright &copy; <span id="year"></span> PartyPlay.lt</p>
                     </div>
                 </div>
             </div>
         </footer>
 
+    <!-- LINKS LEFT -->
+
+    <div class="links-left shadow">
+        <a href="https://www.facebook.com/PartyPlayNuoma/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/partyplaynuoma/"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter mb-0"></i></a>
+        <a href="https://www.skelbiu.lt/"><img src="img/skelbiu.png" alt=""></a>
+        <a href="https://www.dalinuosi.lt/kompiuteriu-nuoma/kaunas/oculus-quest-virtualios-realybes-akiniai-12574"><img src="img/dalinuosi.png" alt=""></a>
+    </div>
+
 
     <!-- PRELOADER -->
 
     <div class="loader-wrapper">
-        <div class="preloader-bounce"><img src="../img/logo-controller.png" alt="" class="img-fluid"></div>
-        </div>
+        <div class="preloader-bounce"><img src="img/logo-controller.png" alt="" class="img-fluid"></div>
+    </div>
     
     
         <script src="https://kit.fontawesome.com/e3336da53c.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
         <script src="js/jquery.waypoints.min.js"></script>
         <script src="js/animate.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script src="js/script.js"></script>
-        
     
     </body>
     </html>

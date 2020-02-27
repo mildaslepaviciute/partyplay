@@ -38,16 +38,53 @@ $(window).on("load", function(){
 
 // Range
 
-var elem = document.querySelector('input[type="range"]');
+var rangeXbox360 = document.querySelector('#rangeXbox360')
+var setXbox360 = function() {
+    var priceXbox360 = document.querySelector('#priceXbox360')
+    var daysXbox360 = document.querySelector('#daysXbox360')
 
-var rangeValue = function(){
-  var newValue = elem.value;
-  var target = document.querySelector('.value');
-  target.innerHTML = newValue;
+    var days = rangeXbox360.value
+    var price
+    var word
+
+    switch (true) {
+        case (days==1): {
+            price = 10
+            word = 'para'
+            break
+        } case (days<7): {
+            price = 10 + (days-1)*5
+            word = 'paros'
+            break
+        } case (days==7): {
+            price = 35
+            word = 'paros'
+            break
+        }case (days<10): {
+            price = 35 + (days-7)*3
+            word = 'paros'
+            break
+        } case (days<12): {
+            price = 35 + (days-7)*3
+            word = 'parų'
+            break
+        }
+        case (days<15): {
+            price = 50
+            word = 'parų'
+            break
+        }
+        default:
+            break;
+    }
+    priceXbox360.innerHTML = price
+    daysXbox360.innerHTML = days + ' ' + word
 }
 
-elem.addEventListener("input", rangeValue);
+rangeXbox360.addEventListener("input", setXbox360);
+
 
 //Init Scrollspy
 
 $('body').scrollspy({ target: '#main-nav' });
+
