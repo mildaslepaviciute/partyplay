@@ -11,8 +11,7 @@ MAIN INFO
 html {
   background: #ecf0f1;
   color: #34495e;
-  text-rendering: optimizeLegibility;
-  scroll-behavior: smooth; }
+  text-rendering: optimizeLegibility; }
 
 body {
   font-family: Poppins, sans-serif;
@@ -34,6 +33,10 @@ h1, h2, h3, .letter {
 h3 {
   font-size: 120%; }
 
+@media (max-width: 575px) {
+  h1,
+  h2 {
+    font-size: 180%; } }
 .gradient {
   background: #3c63ff;
   background: linear-gradient(45deg, #3c63ff 0%, #b53471 100%); }
@@ -174,16 +177,27 @@ FOOTER
 /* -------------
 CAROUSEL
 ---------------*/
-.carousel-item {
-  height: 400px; }
+#hero-img {
+  position: relative;
+  height: 400px;
+  background-image: url(../img/controllerleft.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
 
-.carousel-caption {
-  top: 0%; }
+.hero-text {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff; }
 
 @media (min-width: 576px) {
-  .carousel-caption {
+  .hero-text {
     top: 10%; } }
-.carousel-caption .lead {
+.hero-text .lead {
   width: 40%; }
 
 .carousel-image-1 {
@@ -334,6 +348,20 @@ CITIES SECTION
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out; }
 
+@media (max-width: 590px) {
+  #cities .d-flex {
+    flex-wrap: wrap; }
+
+  .shape-1,
+  .shape-2,
+  .shape-1:after,
+  .shape-2:after {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    border-radius: 6px 6px 6px 6px;
+    margin-bottom: 5px; } }
 /* -------------
 XBOX SECTION
 ---------------*/
@@ -358,7 +386,8 @@ RANGE SECTION
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;
-  width: auto; }
+  width: auto;
+  margin-top: -20px; }
 
 .value {
   text-align: center;
@@ -442,6 +471,37 @@ PRODUCTS & RENTS
   margin-left: 7px;
   margin-right: 7px; }
 
+@media (max-width: 767px) {
+  .col-md-4,
+  .col-md-6 {
+    margin-bottom: 40px; }
+
+  #gallery .col-md-4 {
+    margin-bottom: 10px !important;
+    margin-top: 0px !important; }
+
+  #gallery .row {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important; } }
+/* -------------
+BUTTON PULSE
+---------------*/
+.btn-pulse {
+  -webkit-animation: shadow-pulse 2s infinite;
+  animation: shadow-pulse 2s infinite;
+  -webkit-transition: .3s background-color ease;
+  transition: .3s background-color ease; }
+
+@keyframes shadow-pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(181, 52, 113, 0.5);
+    box-shadow: 0 0 0 0 rgba(181, 52, 113, 0.5); }
+  70% {
+    -webkit-box-shadow: 0 0 0 8px rgba(181, 52, 113, 0);
+    box-shadow: 0 0 0 8px rgba(181, 52, 113, 0); }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(181, 52, 113, 0);
+    box-shadow: 0 0 0 0 rgba(181, 52, 113, 0); } }
 /* -------------
 FAQ
 ---------------*/
@@ -466,13 +526,16 @@ FAQ
   text-decoration: none;
   color: #fff; }
 
+#faq .collapse div {
+  color: #a3a3a3; }
+
 /* -------------
 LINKS LEFT
 ---------------*/
 .links-left {
   background: #B53471;
   width: 50px;
-  height: 180px;
+  height: 140px;
   position: fixed;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -507,6 +570,9 @@ LINKS LEFT
   -webkit-transition: 0.3s;
   transition: 0.3s; }
 
+@media (max-width: 575px) {
+  .links-left {
+    display: none; } }
 /* -------------
 FAQ BUTTON
 ---------------*/
@@ -554,3 +620,5 @@ ANIMATIONS
 .js--wp-3 {
   -webkit-animation-delay: 0.9s;
   animation-delay: 0.9s; }
+
+/*# sourceMappingURL=style.css.map */
