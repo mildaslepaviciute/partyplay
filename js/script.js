@@ -63,26 +63,13 @@ var setOculus = function() {
             price = 25
             word = 'para'
             break
-        } case (days<7): {
-            price = 25 + (days-1)*5
+        } case (days<5): {
+            price = 25 + 15*(days-1)
             word = 'paros'
             break
-        } case (days==7): {
-            price = 35
+        } case (days<8): {
+            price = 70 + 10*(days-4)
             word = 'paros'
-            break
-        }case (days<10): {
-            price = 35 + (days-7)*3
-            word = 'paros'
-            break
-        } case (days<12): {
-            price = 35 + (days-7)*3
-            word = 'parų'
-            break
-        }
-        case (days<15): {
-            price = 50
-            word = 'parų'
             break
         }
         default:
@@ -92,7 +79,9 @@ var setOculus = function() {
     daysOculus.innerHTML = days + ' ' + word
 }
 
-rangeOculus.addEventListener("input", setOculus);
+if(rangeOculus) {
+    rangeOculus.addEventListener("input", setOculus);
+}
 
 
 // Range PSVR
@@ -108,29 +97,20 @@ var setPsvr = function() {
 
     switch (true) {
         case (days==1): {
-            price = 10
+            price = 20
             word = 'para'
             break
+        } case (days<5): {
+            price = 20 + (days-1)*10
+            word = 'paros'
+            break
         } case (days<7): {
-            price = 10 + (days-1)*5
+            price = 50 + (days-4)*8
             word = 'paros'
             break
-        } case (days==7): {
-            price = 35
+        }case (days==7): {
+            price = 70
             word = 'paros'
-            break
-        }case (days<10): {
-            price = 35 + (days-7)*3
-            word = 'paros'
-            break
-        } case (days<12): {
-            price = 35 + (days-7)*3
-            word = 'parų'
-            break
-        }
-        case (days<15): {
-            price = 50
-            word = 'parų'
             break
         }
         default:
@@ -140,7 +120,9 @@ var setPsvr = function() {
     daysPsvr.innerHTML = days + ' ' + word
 }
 
-rangePsvr.addEventListener("input", setPsvr);
+if(rangePsvr) {
+    rangePsvr.addEventListener("input", setPsvr); 
+}
 
 
 // Range Projector Full HD
@@ -150,34 +132,40 @@ var setProjectorFullHd = function() {
     var priceProjectorFullHd = document.querySelector('#priceProjectorFullHd')
     var daysProjectorFullHd = document.querySelector('#daysProjectorFullHd')
 
+    console.log('fuck you mthfcku')
+
     var days = rangeProjectorFullHd.value
     var price
     var word
 
     switch (true) {
         case (days==1): {
-            price = 10
+            price = 15
             word = 'para'
             break
+        } case (days<4): {
+            price = 15 + (days-1)*10
+            word = 'paros'
+            break
         } case (days<7): {
-            price = 10 + (days-1)*5
+            price = 35 + (days-3)*7
             word = 'paros'
             break
-        } case (days==7): {
-            price = 35
+        }case (days==7): {
+            price = 60
             word = 'paros'
             break
-        }case (days<10): {
-            price = 35 + (days-7)*3
+        } case (days<10): {
+            price = 60 + (days-7)*5
             word = 'paros'
             break
-        } case (days<12): {
-            price = 35 + (days-7)*3
+        } case (days<14): {
+            price = 60 + (days-7)*5
             word = 'parų'
             break
         }
-        case (days<15): {
-            price = 50
+        case (days==14): {
+            price = 90
             word = 'parų'
             break
         }
@@ -188,7 +176,10 @@ var setProjectorFullHd = function() {
     daysProjectorFullHd.innerHTML = days + ' ' + word
 }
 
-rangeProjectorFullHd.addEventListener("input", setProjectorFullHd);
+if(rangeProjectorFullHd) {
+    rangeProjectorFullHd.addEventListener("input", setProjectorFullHd);
+}
+
 
 
 // Range Projector Medium Quality
@@ -204,28 +195,28 @@ var setProjectorMedium = function() {
 
     switch (true) {
         case (days==1): {
-            price = 10
+            price = 12
             word = 'para'
             break
         } case (days<7): {
-            price = 10 + (days-1)*5
+            price = 12 + (days-1)*6
             word = 'paros'
             break
         } case (days==7): {
-            price = 35
+            price = 42
             word = 'paros'
             break
         }case (days<10): {
-            price = 35 + (days-7)*3
+            price = 40 + (days-7)*4
             word = 'paros'
             break
         } case (days<12): {
-            price = 35 + (days-7)*3
+            price = 40 + (days-7)*4
             word = 'parų'
             break
         }
         case (days<15): {
-            price = 50
+            price = 60
             word = 'parų'
             break
         }
@@ -235,8 +226,9 @@ var setProjectorMedium = function() {
     priceProjectorMedium.innerHTML = price
     daysProjectorMedium.innerHTML = days + ' ' + word
 }
-
-rangeProjectorMedium.addEventListener("input", setProjectorMedium);
+if(rangeProjectorMedium) {
+    rangeProjectorMedium.addEventListener("input", setProjectorMedium);
+}
 
 
 // Range Projector Low Quality
@@ -284,7 +276,45 @@ var setProjectorLow = function() {
     daysProjectorLow.innerHTML = days + ' ' + word
 }
 
-rangeProjectorLow.addEventListener("input", setProjectorLow);
+if(rangeProjectorLow) {
+    rangeProjectorLow.addEventListener("input", setProjectorLow);
+}
+
+
+// Range Screen
+
+var rangeScreen = document.querySelector('#rangeScreen')
+var setScreen = function() {
+    var priceScreen = document.querySelector('#priceScreen')
+    var daysScreen = document.querySelector('#daysScreen')
+
+    var days = rangeScreen.value
+    var price
+    var word
+
+    switch (true) {
+        case (days==1): {
+            price = 5
+            word = 'para'
+            break
+        } case (days<7): {
+            price = 5 + (days-1)*2
+            word = 'paros'
+            break
+        } case (days==7): {
+            price = 0
+            word = 'paros'
+            break
+        }
+        default:
+            break;
+    }
+    priceScreen.innerHTML = price
+    daysScreen.innerHTML = days + ' ' + word
+}
+if(rangeScreen) {
+    rangeScreen.addEventListener("input", setScreen);
+}
 
 
 // Range Xbox One
@@ -332,8 +362,9 @@ var setXboxOne = function() {
     daysXboxOne.innerHTML = days + ' ' + word
 }
 
-rangeXboxOne.addEventListener("input", setXboxOne);
-
+if(rangeXboxOne) {
+    rangeXboxOne.addEventListener("input", setXboxOne);
+}
 
 // Range Xbox 360
 
@@ -380,10 +411,9 @@ var setXbox360 = function() {
     daysXbox360.innerHTML = days + ' ' + word
 }
 
-rangeXbox360.addEventListener("input", setXbox360);
-
-
-
+if(rangeXbox360) {
+    rangeXbox360.addEventListener("input", setXbox360);
+}
 
 $('.scroll').on('click',function(e) {
 	e.preventDefault();
