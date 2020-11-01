@@ -6,8 +6,8 @@ MAIN INFO
 
 $primary: #3c63ff;
 $info: #B53471;
-$grey: #34495e;
-$body: #ecf0f1;
+$grey: #000;
+$body: #fff;
 
 
 * {
@@ -37,12 +37,6 @@ h1, h2, h3, .letter {
 	font-weight: 800;
 }
 
-.letter {
-	font-size: 72px;
-	letter-spacing: 8px;
-	line-height: 1.2;
-}
-
 h3 {
 	font-size: 120%;
 }
@@ -65,7 +59,15 @@ h3 {
 	-webkit-text-fill-color: transparent;
   }
   
+.card,
+.card-header {
+	box-shadow: 4px 6px 9px 6px rgba(67,65,79,.1);
+}
 
+.card-img-top,
+.card {
+	border-radius: 0;
+}
 
 
 
@@ -126,13 +128,14 @@ NAVIGATION BAR
 
 .navbar a {
     font-weight: 800;
+    font-size: 13px;
+    padding: 1rem !important;
     letter-spacing: 0.1em;
 	text-transform: uppercase;
-	font-size: 12px;
 	color: #000;
-	padding: 1rem !important;
 	-webkit-transition-duration: 0.2s;
 	        transition-duration: 0.2s;
+	        
 }
 
 .navbar a:hover,
@@ -187,10 +190,6 @@ HEADER
 MAP
 ---------------*/
 
-#map {
-	background: #eee;
-}
-
 #map iframe {
 	width: 800px;
 	height: 350px;
@@ -236,8 +235,8 @@ CAROUSEL
 
 #hero-img {
 	position: relative;
-	height: 400px;
-	background-image: url(../img/controllerleft.jpg);
+	height: 70vh;
+	background-image: url(../img/hero_image.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -269,19 +268,6 @@ CAROUSEL
 	background-repeat: no-repeat;
 }
 
-.carousel-image-2 {
-	background: url(../img/xbox360.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 0 -200px;
-}
-
-.carousel-image-3 {
-	background: url(../img/projector-light.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
 
 
 
@@ -290,8 +276,15 @@ CAROUSEL
 RAINBOW TEXT
 ---------------*/
 
+@media (max-width: 1200px) {
+
+.rainbow-text .display-1 {
+	line-height: 1;
+}
+}
+
 .letter {
-	margin-left: -10px;
+	margin-left: -15px;
  color: #FFF;
  text-shadow: 2px 2px 6px #333;
  -webkit-animation: color-changer 8s infinite;
@@ -348,19 +341,21 @@ CITIES SECTION
 .shape-1 {
 	-webkit-clip-path: polygon(0 0, 75% 0%, 100% 100%, 0% 100%);
 	        clip-path: polygon(0 0, 75% 0%, 100% 100%, 0% 100%);
-	-webkit-transform: translateX(30px);
-	        transform: translateX(30px);
-	width: 300px;
+	-webkit-transform: translateX(40px);
+	        transform: translateX(40px);
+	width: 400px;
 	border: 0px solid $primary;
 	border-radius: 6px 0 0 6px;
+	height: 100px;
 }
 
 .shape-2 {
 	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
 	        clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
-	-webkit-transform: translateX(-30px);
-	        transform: translateX(-30px);
-	width: 300px;
+	-webkit-transform: translateX(-40px);
+	        transform: translateX(-40px);
+	width: 400px;
+	height: 100px;
 	border: 0px solid $info;
 	border-radius:  0 6px 6px 0;
 }
@@ -370,12 +365,17 @@ CITIES SECTION
 	position: relative;
   }
 
-  #cities a {
+  #cities h4 {
+	  position: absolute;
+	  left: 50%;
+	  transform: translateX(-50%);
 	  text-decoration: none;
 	  font-weight: 800;
 	  text-transform: uppercase;
 	  letter-spacing: 2px;
 	  color: #fff;
+	  line-height: 100px;
+	  top:0;
   }
 
   #cities h4 {
@@ -435,23 +435,23 @@ CITIES SECTION
 
   }
 
-  @media (max-width: 590px) {
-	#cities .d-flex {
-		flex-wrap: wrap;
-	}
+@media (max-width: 790px) {
+  #cities .d-flex {
+    flex-wrap: wrap; }
 
-	.shape-1,
-	.shape-2,
-	.shape-1:after,
-	.shape-2:after {
-		-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-		clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
--webkit-transform: translateX(0px);
-		transform: translateX(0px);
-		border-radius: 6px 6px 6px 6px;
-		margin-bottom: 5px;
-	}
-}
+  .shape-1,
+  .shape-2,
+  .shape-1:after,
+  .shape-2:after {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    border-radius: 6px 6px 6px 6px;
+    margin-bottom: 5px;
+    width: 300px;
+      
+  } }
 
 /* -------------
 XBOX SECTION
@@ -638,7 +638,7 @@ FAQ
 
 
 #faq {
-	background: url("../img/oculus_quest_action.jpg");
+	background: url("../img/faq-background.jpg");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;

@@ -9,26 +9,21 @@ MAIN INFO
   box-sizing: border-box; }
 
 html {
-  background: #ecf0f1;
-  color: #34495e;
+  background: #fff;
+  color: #000;
   text-rendering: optimizeLegibility; }
 
 body {
   font-family: Poppins, sans-serif;
   overflow-x: hidden;
-  background: #ecf0f1;
-  color: #34495e; }
+  background: #fff;
+  color: #000; }
 
 .btn-white-border {
   border: 2px #fff solid; }
 
 h1, h2, h3, .letter {
   font-weight: 800; }
-
-.letter {
-  font-size: 72px;
-  letter-spacing: 8px;
-  line-height: 1.2; }
 
 h3 {
   font-size: 120%; }
@@ -46,6 +41,14 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
+.card,
+.card-header {
+  box-shadow: 4px 6px 9px 6px rgba(67, 65, 79, 0.1); }
+
+.card-img-top,
+.card {
+  border-radius: 0; }
+
 /* -------------
 PRELOADER
 ---------------*/
@@ -53,8 +56,10 @@ PRELOADER
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
   background: #fff;
   z-index: 999;
   display: -webkit-box;
@@ -96,11 +101,11 @@ NAVIGATION BAR
 
 .navbar a {
   font-weight: 800;
+  font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-size: 12px;
-  color: #000;
   padding: 1rem !important;
+  color: #000;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s; }
 
@@ -143,9 +148,6 @@ HEADER
 /* -------------
 MAP
 ---------------*/
-#map {
-  background: #eee; }
-
 #map iframe {
   width: 800px;
   height: 350px;
@@ -179,8 +181,8 @@ CAROUSEL
 ---------------*/
 #hero-img {
   position: relative;
-  height: 400px;
-  background-image: url(../img/controllerleft.jpg);
+  height: 70vh;
+  background-image: url(../img/hero_image.jpg);
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -197,6 +199,8 @@ CAROUSEL
 @media (min-width: 576px) {
   .hero-text {
     top: 10%; } }
+    
+    
 .hero-text .lead {
   width: 40%; }
 
@@ -205,22 +209,14 @@ CAROUSEL
   background-size: cover;
   background-repeat: no-repeat; }
 
-.carousel-image-2 {
-  background: url(../img/xbox360.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0 -200px; }
-
-.carousel-image-3 {
-  background: url(../img/projector-light.jpg);
-  background-size: cover;
-  background-repeat: no-repeat; }
-
 /* -------------
 RAINBOW TEXT
 ---------------*/
+@media (max-width: 1200px) {
+  .rainbow-text .display-1 {
+    line-height: 1; } }
 .letter {
-  margin-left: -10px;
+  margin-left: -15px;
   color: #FFF;
   text-shadow: 2px 2px 6px #333;
   -webkit-animation: color-changer 8s infinite;
@@ -248,6 +244,7 @@ RAINBOW TEXT
   .letter:nth-of-type(7) {
     -webkit-animation-delay: 700ms;
     animation-delay: 700ms; }
+    
 
 @keyframes color-changer {
   33% {
@@ -279,7 +276,8 @@ CITIES SECTION
   transform: translateX(30px);
   width: 300px;
   border: 0px solid #3c63ff;
-  border-radius: 6px 0 0 6px; }
+  border-radius: 6px 0 0 6px;
+  color: #fff;}
 
 .shape-2 {
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
@@ -288,7 +286,9 @@ CITIES SECTION
   transform: translateX(-30px);
   width: 300px;
   border: 0px solid #B53471;
-  border-radius: 0 6px 6px 0; }
+  border-radius: 0 6px 6px 0; 
+    color: #fff;
+}
 
 .shape {
   cursor: pointer;
@@ -298,8 +298,7 @@ CITIES SECTION
   text-decoration: none;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #fff; }
+  letter-spacing: 2px; }
 
 #cities h4 {
   font-weight: 800; }
@@ -347,8 +346,9 @@ CITIES SECTION
   animation-duration: 3s;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out; }
+  
 
-@media (max-width: 590px) {
+@media (max-width: 790px) {
   #cities .d-flex {
     flex-wrap: wrap; }
 
@@ -361,7 +361,10 @@ CITIES SECTION
     -webkit-transform: translateX(0px);
     transform: translateX(0px);
     border-radius: 6px 6px 6px 6px;
-    margin-bottom: 5px; } }
+    margin-bottom: 5px;
+    width: 300px;
+      
+  } }
 /* -------------
 XBOX SECTION
 ---------------*/
@@ -438,7 +441,7 @@ PRODUCTS & RENTS
 ---------------*/
 #products a {
   text-decoration: none;
-  color: #34495e; }
+  color: #000; }
 
 #products .col-md-4 {
   -webkit-transition-duration: .4s;
@@ -506,7 +509,7 @@ BUTTON PULSE
 FAQ
 ---------------*/
 #faq {
-  background: url("../img/oculus_quest_action.jpg");
+  background: url("../img/faq-background.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -620,5 +623,3 @@ ANIMATIONS
 .js--wp-3 {
   -webkit-animation-delay: 0.9s;
   animation-delay: 0.9s; }
-
-/*# sourceMappingURL=style.css.map */

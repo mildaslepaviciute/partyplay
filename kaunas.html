@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144103990-1"></script>
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-144103990-1');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Teikiame žaidimų konsolių, virtualios realybės akinių ir projektorių nuomos paslaugas Kaune ir Klaipėdoje. Skambinti numeriu +370 621 14494">
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
@@ -22,12 +33,37 @@
     <title>Party Play</title>
 </head>
 <body data-spy="scroll" data-target="#main-nav" id="home">
+    <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v7.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="1000321313452921"
+  logged_in_greeting="Sveiki! Kuo galime jums padėti?"
+  logged_out_greeting="Sveiki! Kuo galime jums padėti?">
+      </div>
 
     <!-- NAVBAR -->
 
     <nav class="navbar navbar-expand-md sticky-top shadow" id="main-nav">
         <div class="container">
-            <a href="index.html" class="navbar-brand"><span><img class="logo" src="img/logo-controller.png" alt=""></span> Party Play</a>
+            <a href="index.html" class="navbar-brand"><span><img class="logo" src="img/logo.png" alt=""></span> Party Play</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="fas fa-bars"></span>
             </button>
@@ -62,19 +98,22 @@
                     <div class="container">
                         <div class="hero-text d-none d-sm-block text-right mb-5 ml-auto">
                             <div class="rainbow-text js--wp-1">
-                                <div class="rainbow-text"></div>
-                                    <span class="letter">P</span>
-                                    <span class="letter">A</span>
-                                    <span class="letter">R</span>
-                                    <span class="letter">T</span>
-                                    <span class="letter">Y</span>
-                            </div>
-                            <div class="rainbow-text js--wp-1">
-                                    <span class="letter">P</span>
-                                    <span class="letter">L</span>
-                                    <span class="letter">A</span>
-                                    <span class="letter">Y</span>
-                            </div>
+                    <h1 class="display-2">
+                        <span class="letter">P</span>
+                        <span class="letter">A</span>
+                        <span class="letter">R</span>
+                        <span class="letter">T</span>
+                        <span class="letter">Y</span>
+                        </h1>
+            </div>
+            <div class="rainbow-text js--wp-1">
+                        <h1 class="display-2">
+                        <span class="letter">P</span>
+                        <span class="letter">L</span>
+                        <span class="letter">A</span>
+                        <span class="letter">Y</span>
+                        </h1>
+            </div>
                         <p class="ml-auto js--wp-2">Pramogos laisvalaikiui ir verslui</p>
                         <a href="#contact" class="btn btn-lg btn-info js--wp-3 scroll" data-offset="80">Susisiekime</a>
                     </div>
@@ -91,7 +130,7 @@
                     <a href="#kaunas-vr" class="scroll" data-offset="250">
                     <div class="card">
                         <div class="card-header header-rounded rounded-circle"><i class="fas fa-vr-cardboard"></i></div>
-                        <img src="img/18.png" alt="" class="card-img-top img-fluid">
+                        <img src="img/virtuali_realybe.png" alt="" class="card-img-top img-fluid">
                         <div class="card-body text-center p-3">
                             <div class="card-title">
                                 <h3 class="text-info">Virtuali realybė</h3>
@@ -111,7 +150,7 @@
                     <a href="#kaunas-console" class="scroll" data-offset="250">
                     <div class="card">
                         <div class="card-header header-rounded rounded-circle"><i class="fas fa-gamepad"></i></div>
-                        <img src="img/5.jpg" alt="" class="card-img-top img-fluid">
+                        <img src="img/zaidimu_konsole.jpg" alt="" class="card-img-top img-fluid">
                         <div class="card-body text-center p-3">
                             <div class="card-title">
                                 <h3 class="text-info">Žaidimų konsolės</h3>
@@ -128,7 +167,7 @@
                 <div class="col-md-4">
                     <a href="#kaunas-projector" class="scroll" data-offset="250">
                     <div class="card">
-                        <img src="img/28.jpg" alt="" class="card-img-top img-fluid">
+                        <img src="img/projektorius.jpg" alt="" class="card-img-top img-fluid">
                         <div class="card-header header-rounded rounded-circle"><i class="fas fa-lightbulb"></i></div>
                         <div class="card-body text-center p-3">
                             <div class="card-title">
@@ -320,7 +359,7 @@
                 <div class="col-md-6">
                     <div class="card text-center">
                         <div class="card-header header-rounded rounded-circle">2</div>
-                        <img src="img/xbox360.jpg" alt="" class="img-fluid card-img-top">
+                        <img src="img/xbox_360.jpg" alt="" class="img-fluid card-img-top">
                         <div class="card-body p-3">
                             <h3 class="text-info">XBOX 360 Slim E</h3>
                             <p class="mb-0">
@@ -428,7 +467,7 @@
                 <div class="col-md-4">
                     <div class="card text-center">
                         <div class="card-header header-rounded rounded-circle">2</div>
-                        <img src="img/viewsonicc.jpg" alt="" class="img-fluid card-img-top">
+                        <img src="img/viewsonic.jpg" alt="" class="img-fluid card-img-top">
                         <div class="card-body p-3">
                             <h3 class="text-info">ViewSonic PA502XP</h3>
                             <p class="mb-0">
@@ -525,7 +564,7 @@
                     <div class="card p-3">
                         <div class="row">
                           <div class="col-md-5 d-flex">
-                            <img src="img/pr-screen.png" class="img-fluid align-self-center" alt="">
+                            <img src="img/ekranas.png" class="img-fluid align-self-center" alt="">
                           </div>
                           <div class="col-md-7">
                             <div class="card-body p-3">
@@ -699,9 +738,7 @@
                     <div class="col-md-4">
                         <h3 class="text-info">Apie mus</h3>
                         <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quasi ego
-                        id curem, quid ille aiat aut neget. Quam illa ardentis amores
-                        excitaret sui! Cur tandem?
+                        Party Play! Teikiame žaidimų konsolių, virtualios realybės akinių ir projektorių nuomos paslaugas Kaune ir Klaipėdoje.
                         </p>
                     </div>
                     <div class="col-md-4">
@@ -717,8 +754,8 @@
                     <div class="col-md-4">
                         <h3 class="text-info">Adresas</h3>
                         <p>
-                        Kaune: Vilniaus g. 26<br><br>
-                        Klaipėdoje: Jono g. 3<br>
+                        Kaune: Nemuno g. 26<br><br>
+                        Klaipėdoje: Tiltų g. 3<br>
                         <br>
                         Prieš atvykstant būtina susiderinti iš anksto
                         </p>
@@ -751,17 +788,11 @@
         <a href="https://www.dalinuosi.lt/kompiuteriu-nuoma/kaunas/oculus-quest-virtualios-realybes-akiniai-12574" target="blank"><img src="img/dalinuosi.png" alt=""></a>
     </div>
 
-    <!-- FAQ BUTTON -->
-    <a href="#faq" class="scroll" data-offset="80">
-    <div class="faq-button rounded-circle shadow fixed-bottom ml-auto mr-4 mb-4">
-        <i class="fas fa-question text-info"></i>
-    </div>
-    </a>
 
     <!-- PRELOADER -->
 
     <div class="loader-wrapper">
-        <div class="preloader-bounce"><img src="img/logo-controller.png" alt="" class="img-fluid"></div>
+        <div class="preloader-bounce"><img src="img/logo.png" alt="" class="img-fluid"></div>
     </div>
     
     

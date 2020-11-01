@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="lt">
     <head>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144103990-1"></script>
+		<script>
+	  		window.dataLayer = window.dataLayer || [];
+	  		function gtag(){dataLayer.push(arguments);}
+	  		gtag('js', new Date());
+
+	  		gtag('config', 'UA-144103990-1');
+		</script>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Teikiame žaidimų konsolių, virtualios realybės akinių ir projektorių nuomos paslaugas Kaune ir Klaipėdoje. Skambinti numeriu +370 621 14494">
     
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
@@ -22,12 +33,38 @@
         <title>Party Play</title>
     </head>
 <body>
+<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v7.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="1000321313452921"
+  logged_in_greeting="Sveiki! Kuo galime jums padėti?"
+  logged_out_greeting="Sveiki! Kuo galime jums padėti?">
+      </div>
+
 
     <!-- NAVBAR -->
 
     <nav class="navbar navbar-expand-md sticky-top shadow" id="main-nav">
         <div class="container">
-            <a href="index.html" class="navbar-brand"><span><img class="logo" src="img/logo-controller.png" alt=""></span> Party Play</a>
+            <a href="index.html" class="navbar-brand"><span><img class="logo" src="img/logo.png" alt=""></span> Party Play</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="fas fa-bars"></span>
             </button>
@@ -51,22 +88,25 @@
 
 <section id="hero-img">
     <div class="container">
-        <div class="hero-text d-none d-sm-block text-right mb-5 ml-auto">
+        <div class="hero-text text-right d-none d-sm-block mb-5 ml-auto">
             <div class="rainbow-text js--wp-1">
-                <div class="rainbow-text"></div>
-                    <span class="letter">P</span>
-                    <span class="letter">A</span>
-                    <span class="letter">R</span>
-                    <span class="letter">T</span>
-                    <span class="letter">Y</span>
+                    <h1 class="display-2">
+                        <span class="letter">P</span>
+                        <span class="letter">A</span>
+                        <span class="letter">R</span>
+                        <span class="letter">T</span>
+                        <span class="letter">Y</span>
+                        </h1>
             </div>
             <div class="rainbow-text js--wp-1">
-                    <span class="letter">P</span>
-                    <span class="letter">L</span>
-                    <span class="letter">A</span>
-                    <span class="letter">Y</span>
+                        <h1 class="display-2">
+                        <span class="letter">P</span>
+                        <span class="letter">L</span>
+                        <span class="letter">A</span>
+                        <span class="letter">Y</span>
+                        </h1>
             </div>
-        <p class="ml-auto js--wp-2">Nerealiausia įranga jūsų šventei</p>
+        <p class="ml-auto js--wp-2">Pramogos laisvalaikiui ir verslui</p>
     </div>
     </div>
 </section>
@@ -74,11 +114,11 @@
 
     <!-- CITIES -->
 
-    <section id="cities" class="pt-4 text-center">
+    <section id="cities" class="py-4 text-center">
         <div class="container">
-            <h3 class="mb-3">Pasirinkite savo miestą</h3>
+            <h3 class="mb-4">Pasirinkite savo miestą</h3>
         </div>
-            <div class="d-flex justify-content-center text-white animated pulse">
+            <div class="d-flex justify-content-center animated pulse">
                 <a href="kaunas.html">
                     <div class="py-4 shape shape-1 text-center">
                     <h4 class="mb-0">Kaunas</h4>
@@ -104,8 +144,9 @@
     <!-- PRELOADER -->
 
     <div class="loader-wrapper">
-        <div class="preloader-bounce"><img src="img/logo-controller.png" alt="" class="img-fluid"></div>
-        </div>
+        <div class="preloader-bounce"><img src="img/logo.png" alt="" class="img-fluid"></div>
+    </div>
+    
     
     
         <script src="https://kit.fontawesome.com/e3336da53c.js" crossorigin="anonymous"></script>
@@ -116,7 +157,6 @@
         <script src="js/jquery.waypoints.min.js"></script>
         <script src="js/animate.js"></script>
         <script src="js/script.js"></script>
-        
     
     </body>
     </html>
