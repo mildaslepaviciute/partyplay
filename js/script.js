@@ -84,44 +84,44 @@ if(rangeOculus) {
 }
 
 
-// Range PSVR
+// Range QUEST 2
 
-var rangePsvr = document.querySelector('#rangePsvr')
-var setPsvr = function() {
-    var pricePsvr = document.querySelector('#pricePsvr')
-    var daysPsvr = document.querySelector('#daysPsvr')
+var rangeQuest2 = document.querySelector('#rangeQuest2')
+var setQuest2 = function() {
+    var priceQuest2 = document.querySelector('#priceQuest2')
+    var daysQuest2 = document.querySelector('#daysQuest2')
 
-    var days = rangePsvr.value
+    var days = rangeQuest2.value
     var price
     var word
 
     switch (true) {
         case (days==1): {
-            price = 20
+            price = 30
             word = 'para'
             break
         } case (days<5): {
-            price = 20 + (days-1)*10
+            price = 30 + (days-1)*20
             word = 'paros'
             break
         } case (days<7): {
-            price = 50 + (days-4)*8
+            price = 100 + (days-4)*10
             word = 'paros'
             break
         }case (days==7): {
-            price = 70
+            price = 130
             word = 'paros'
             break
         }
         default:
             break;
     }
-    pricePsvr.innerHTML = price
-    daysPsvr.innerHTML = days + ' ' + word
+    priceQuest2.innerHTML = price
+    daysQuest2.innerHTML = days + ' ' + word
 }
 
-if(rangePsvr) {
-    rangePsvr.addEventListener("input", setPsvr); 
+if(rangeQuest2) {
+    rangeQuest2.addEventListener("input", setQuest2); 
 }
 
 
@@ -414,6 +414,61 @@ var setXbox360 = function() {
 if(rangeXbox360) {
     rangeXbox360.addEventListener("input", setXbox360);
 }
+
+// Range Ibiza
+
+var rangeIbiza = document.querySelector('#rangeIbiza')
+var setIbiza = function() {
+    var priceIbiza = document.querySelector('#priceIbiza')
+    var daysIbiza = document.querySelector('#daysIbiza')
+
+    var days = rangeIbiza.value
+    var price
+    var word
+
+    switch (true) {
+        case (days==1): {
+            price = 10
+            word = 'para'
+            break
+        } case (days<7): {
+            price = 10 + (days-1)*5
+            word = 'paros'
+            break
+        } case (days==7): {
+            price = 35
+            word = 'paros'
+            break
+        }case (days<10): {
+            price = 35 + (days-7)*3
+            word = 'paros'
+            break
+        } case (days<12): {
+            price = 35 + (days-7)*3
+            word = 'parų'
+            break
+        }
+        case (days<15): {
+            price = 50
+            word = 'parų'
+            break
+        }
+        default:
+            break;
+    }
+    priceIbiza.innerHTML = price
+    daysIbiza.innerHTML = days + ' ' + word
+}
+
+if(rangeIbiza) {
+    rangeIbiza.addEventListener("input", setIbiza);
+}
+
+
+
+
+
+
 
 $('.scroll').on('click',function(e) {
 	e.preventDefault();
