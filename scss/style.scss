@@ -392,14 +392,22 @@ CITIES SECTION
 	z-index: -1;
   }
 
-  .shape-1:after {
-	background: linear-gradient(45deg, transparent 50%, $primary 50%);
+  .shape-1 {
+	background: $primary;
 	border-radius: 6px 0 0 6px;
 }
 
-  .shape-2:after {
-	background: linear-gradient(45deg, transparent 50%, $info 50%);
+  .shape-2 {
+	background: $info;
 	border-radius:  0 6px 6px 0;
+}
+
+.shape-1:hover {
+	background: #2e45a5;
+}
+
+  .shape-2:hover {
+	background: #722046;
 }
   
   .shape,
@@ -408,21 +416,6 @@ CITIES SECTION
 	background-position: 100%;
 	-webkit-transition: 1s;
 	transition: 1s;
-  }
-  
-  .shape:hover,
-  .shape:hover:after {
-	background-position: 0;
-  }
-
-  .shape-1:hover,
-  .shape-1:hover:after {
-	color: $primary;
-  }
-
-  .shape-2:hover,
-  .shape-2:hover:after {
-	color: $info;
   }
 
   #cities .pulse {

@@ -312,13 +312,19 @@ CITIES SECTION
   right: 0;
   z-index: -1; }
 
-.shape-1:after {
-  background: linear-gradient(45deg, transparent 50%, #3c63ff 50%);
+.shape-1 {
+  background: #3c63ff;
   border-radius: 6px 0 0 6px; }
 
-.shape-2:after {
-  background: linear-gradient(45deg, transparent 50%, #B53471 50%);
+.shape-2 {
+  background: #B53471;
   border-radius: 0 6px 6px 0; }
+
+.shape-1:hover {
+  background: #2e45a5; }
+
+.shape-2:hover {
+  background: #722046; }
 
 .shape,
 .shape:after {
@@ -326,18 +332,6 @@ CITIES SECTION
   background-position: 100%;
   -webkit-transition: 1s;
   transition: 1s; }
-
-.shape:hover,
-.shape:hover:after {
-  background-position: 0; }
-
-.shape-1:hover,
-.shape-1:hover:after {
-  color: #3c63ff; }
-
-.shape-2:hover,
-.shape-2:hover:after {
-  color: #B53471; }
 
 #cities .pulse {
   -webkit-animation-iteration-count: infinite;
