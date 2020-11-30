@@ -28,12 +28,28 @@ function autoPlayYouTubeModal() {
     });
 };
 
-
 // Preloader
 
-$(window).on("load", function(){
-    $(".loader-wrapper").fadeOut("slow");
-});
+$(document).ready(function () {
+    const loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart
+
+    //Preloader
+    const preloaderFadeOutTime = 500
+    const minimumPreloaderTime = 2000
+    function hidePreloader() {
+        var preloader = $('.spinner-wrapper')
+        preloader.fadeOut(preloaderFadeOutTime)
+    }
+    
+    const preloadDiff = minimumPreloaderTime - loadTime
+    if (preloadDiff > 0) {
+        setTimeout(() => {
+            hidePreloader()
+        }, preloadDiff)
+    } else {
+        hidePreloader()
+    }
+})
 
 
 //Init Scrollspy
