@@ -33,7 +33,6 @@ function autoPlayYouTubeModal() {
 $(document).ready(function () {
     const loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart
 
-    //Preloader
     const preloaderFadeOutTime = 500
     const minimumPreloaderTime = 2000
     function hidePreloader() {
